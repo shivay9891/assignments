@@ -1,0 +1,35 @@
+import numpy as np
+
+ar =  np.array(1)  # 0 dim array
+print(ar)
+print('Dimention of the array is: ',ar.ndim)
+print()
+
+arr = np.array([1,2,3,4]) # 1 dim array
+print(arr)
+print('Dimention of the array is: ',arr.ndim); print()
+
+arr2 = np.array([[1,2],[3,4]])  # 2 dim array
+print(arr2)
+print('Dimention of the array is: ',arr2.ndim); print()
+
+arr3= np.array([[[1,15,9],[6,7,4]],[[0,19,2],[10,12,5]]])  # 3 dim array
+print(arr3)
+print('Dimention of the array is: ',arr3.ndim) 
+
+print()
+for i in np.nditer(arr3):
+    print(i)
+print()
+print(arr3)
+
+#Try using np.sort() and np.where() with one 3 Dimention array using Numpy
+#assignment
+
+arr4= np.sort(arr3)
+print(arr4)
+
+#pass the condition in the agrument whenever condition satisfies it returns the value for the whole array
+a= np.where(arr3<4)  
+print('Indices of elements <4')
+arr3[a]
